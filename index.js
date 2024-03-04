@@ -18,6 +18,7 @@ class Deck {
         this.cards[newIndex] = this.cards[i] 
         this.cards[i] = oldValue 
     }
+
 }
 
 class Card {
