@@ -1,5 +1,19 @@
-const SUITS = ["♠" + "♡" + "♢" + "♣"]
-const VALUES = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+const SUITS = ["♠", "♡", "♢", "♣"]
+const VALUES = [
+"A", 
+"2", 
+"3", 
+"4", 
+"5", 
+"6", 
+"7", 
+"8", 
+"9", 
+"10", 
+"J", 
+"Q", 
+"K"
+]
 
 
 
@@ -38,10 +52,11 @@ class Card {
     }
 
     get color() {
-        return this.suite === '♣' || this.suite === '♠' ? 'black' : 'red'
+        return this.suit === '♣' || this.suit === '♠' ? 'black' : 'red'
     }
 
     getHTML() {
+        console.log("this is my card suit", this.suit)
         const cardDiv = document.createElement('div')
         cardDiv.innerText = this.suit
         cardDiv.classList.add("card", this.color)

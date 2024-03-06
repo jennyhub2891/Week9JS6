@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2rem;
     border-radius: .5rem;
     color: white;
     user-select: none;
@@ -50,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 3rem;
 
 /*border: 1px solid #dee2e6;
     color: #495057;*/
