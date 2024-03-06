@@ -1,7 +1,9 @@
 const SUITS = ["♠" + "♡" + "♢" + "♣"]
 const VALUES = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 
-class Deck {
+
+
+export default class Deck {
     constructor(cards = freshDeck()) {
         this.cards = cards
     }
@@ -10,15 +12,23 @@ class Deck {
         return this.cards.length
     }
 
+    pop() {
+        return this.cards.shift()
+    }
+
+    push(card) {
+        this.cards.push(card)
+    }
+
     shuffle(){
         //this.cards.sort((a, b) => Math.random() - .5) //utilizing this random piece doesn't actually 100% randomize the cards.
-        for (let i = this.numberOfCards - 1; i > 0; i--)// takes the cards from the back of the deck and flips them over
+        for (let i = this.numberOfCards - 1; i > 0; i--) { // takes the cards from the back of the deck and flips them over
         const newIndex = Math.floor(Math.random() * (i + 1)) //random index that is before the current card we are on
         const oldValue = this.cards[newIndex] //swap the card we are currently on with the new card we got on line 15
         this.cards[newIndex] = this.cards[i] 
         this.cards[i] = oldValue 
+        }
     }
-
 }
 
 class Card {
@@ -26,15 +36,30 @@ class Card {
         this.suit = suit
         this.value = value
     }
+
+    get color() {
+        return this.suite === '♣' || this.suite === '♠' ? 'black' : 'red'
+    }
+
+    getHTML() {
+        const cardDiv = document.createElement('div')
+        cardDiv.innerText = this.suit
+        cardDiv.classList.add("card", this.color)
+        cardDiv.dataset.value = `${this.value} ${this.suit}`
+        return cardDiv
+    }
 }
+
+
+
 
 function freshDeck(){
     return SUITS.flatMap(suit => { //flatmap turns it into 1 array of 52 vs 4 arrays of 13 each
         return VALUES.map(value => {
-            return new Card(suite, value)
+            return new Card(suit, value)
         })
     })
 }
 
-const deck = new Deck();
-console.log(deck.cards);
+//const deck = new Deck();
+//console.log(deck.cards);
