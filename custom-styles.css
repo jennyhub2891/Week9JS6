@@ -1,7 +1,11 @@
-*, *::after, *::before {
+/* Apply box-sizing: border-box to all elements and their pseudo-elements */
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
+/* Style for the overall page body */
 body {
     margin: 0;
     display: grid;
@@ -13,6 +17,7 @@ body {
     padding-top: 1rem;
 }
 
+/* Styling for the card decks */
 .deck {
     height: 100%;
     width: 100%;
@@ -26,14 +31,17 @@ body {
     user-select: none;
 }
 
+/* Styling for the computer deck with a green background */
 .computer-deck {
     background-color: green;
 }
 
+/* Styling for the player deck with a blue background */
 .player-deck {
     background-color: blue;
 }
 
+/* Styling for text elements within the grid */
 .text {
     grid-column: span 2;
     display: flex;
@@ -41,6 +49,7 @@ body {
     align-items: center;
 }
 
+/* Styling for individual cards */
 .card {
     position: relative;
     height: 100%;
@@ -52,14 +61,16 @@ body {
     align-items: center;
     font-size: 3rem;
 
-/*border: 1px solid #dee2e6;
+    /*border: 1px solid #dee2e6;
     color: #495057;*/
 }
 
+/* Styling for red-colored cards */
 .card.red {
     color: red;
 }
 
+/* Styling for black-colored cards */
 .card.black {
     color: black;
 }
@@ -71,11 +82,13 @@ body {
     font-size: 1rem;
 }
 
+/* Positioning of the card value before */
 .card::before {
     top: .5rem;
     left: .5rem
 }
 
+/* Positioning of the card value after */
 .card::after {
     bottom: .5rem;
     right: .5rem;
