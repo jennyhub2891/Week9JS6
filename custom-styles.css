@@ -27,18 +27,18 @@ body {
     align-items: center;
     font-size: 2rem;
     border-radius: .5rem;
-    color: white;
+    color: black;
     user-select: none;
 }
 
 /* Styling for the computer deck with a green background */
 .computer-deck {
-    background-color: green;
+    background-color: paleturquoise;
 }
 
 /* Styling for the player deck with a blue background */
 .player-deck {
-    background-color: blue;
+    background-color: grey;
 }
 
 /* Styling for text elements within the grid */

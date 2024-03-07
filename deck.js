@@ -57,7 +57,7 @@ class Card {
     }
     //generates html representation of the card
     getHTML() {
-        console.log("this is my card suit", this.suit)
+        //console.log("this is my card suit", this.suit)
         const cardDiv = document.createElement('div')
         cardDiv.innerText = this.suit
         cardDiv.classList.add("card", this.color)
