@@ -44,7 +44,7 @@ document.addEventListener('click', () => {
     }
 })
 
-// Start the game initially
+// Start the game 
 startGame()
 
 function startGame() {
@@ -62,7 +62,7 @@ function startGame() {
     cleanBeforeRound()
 }
 
-// Function to clean up before starting a new round
+// clean up before starting a new round
 function cleanBeforeRound() {
     inRound = false
     computerCardSlot.innerHTML = ""
@@ -77,12 +77,12 @@ function flipCards() {
     // Draw cards for player and computer
     const playerCard = playerDeck.pop()
     const computerCard = computerDeck.pop()
-    // Display the drawn cards
+    // Show the drawn cards
     playerCardSlot.appendChild(playerCard.getHTML())
     computerCardSlot.appendChild(computerCard.getHTML())
     // Update the deck count display
     updateDeckCount()
-    // Determine the winner of the round and handle accordingly
+    // Determine the winner of the round and handle 
     if (isRoundWinner(playerCard, computerCard)) {
         text.innerText = "Win"
         playerDeck.push(playerCard)
@@ -93,7 +93,7 @@ function flipCards() {
         computerDeck.push(computerCard)
     } else {
         text.innerText = "Draw"
-        // Draw scenario: No points awarded
+        // Draw scenario No points awarded
     }
     // Check if the game is over
     if (isGameOver(playerDeck)) {
@@ -104,16 +104,16 @@ function flipCards() {
         stop = true
     }
 }
-// Function to update the deck count display
+// update the deck count display
 function updateDeckCount() {
     computerDeckElement.innerText = computerDeck.numberOfCards
     playerDeckElement.innerText = playerDeck.numberOfCards
 }
-// Function to determine the winner of a round
+// determine the winner of a round
 function isRoundWinner(cardOne, cardTwo) {
     return CARD_VALUE_MAP[cardOne.value] > CARD_VALUE_MAP[cardTwo.value]
 }
-// Function to check if the game is over for a given deck  
+// check if the game is over for a given deck  
 function isGameOver(deck) {
     return deck.numberOfCards === 0
 }
