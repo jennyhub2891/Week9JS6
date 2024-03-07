@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Style for the overall page body */
+/* Style page body */
 body {
     margin: 0;
     display: grid;
@@ -17,7 +17,7 @@ body {
     padding-top: 1rem;
 }
 
-/* Styling for the card decks */
+/* Styling card decks */
 .deck {
     height: 100%;
     width: 100%;
@@ -31,17 +31,17 @@ body {
     user-select: none;
 }
 
-/* Styling for the computer deck with a green background */
+/* Styling computer deck  */
 .computer-deck {
     background-color: paleturquoise;
 }
 
-/* Styling for the player deck with a blue background */
+/* Styling player deck  */
 .player-deck {
     background-color: grey;
 }
 
-/* Styling for text elements within the grid */
+/* Styling text elements within the card */
 .text {
     grid-column: span 2;
     display: flex;
@@ -49,7 +49,7 @@ body {
     align-items: center;
 }
 
-/* Styling for individual cards */
+/* Styling individual cards */
 .card {
     position: relative;
     height: 100%;
@@ -65,12 +65,12 @@ body {
     color: #495057;*/
 }
 
-/* Styling for red-colored cards */
+/* Styling red-colored cards */
 .card.red {
     color: red;
 }
 
-/* Styling for black-colored cards */
+/* Styling black-colored cards */
 .card.black {
     color: black;
 }
@@ -82,13 +82,13 @@ body {
     font-size: 1rem;
 }
 
-/* Positioning of the card value before */
+/* Positioning card value before */
 .card::before {
     top: .5rem;
     left: .5rem
 }
 
-/* Positioning of the card value after */
+/* Positioning card value after */
 .card::after {
     bottom: .5rem;
     right: .5rem;
